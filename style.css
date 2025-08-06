@@ -120,6 +120,7 @@ section h2{
 }
 #about p{
     width:80%;
+    font-size:18px;
 }
 #about img{
     width: 300px;
@@ -139,7 +140,24 @@ section h2{
     justify-content: flex-start;
     align-items: center;
 }
-
+/*-------------------------------------------
+Univercity experiences
+-------------------------------------------*/
+#Uni-experiences {
+    align-items: center;
+}
+#Uni-experiences p{
+    margin-left:200px;
+    font-size:17px;
+    background-color: #fffffe;
+    padding-left:80px;
+    padding-right:80px;
+    padding-top:40px;
+    padding-bottom:40px;
+    margin-left: 100px;
+    margin-right: 100px;
+    border-radius: 16px;
+}
 /*-------------------------------------------
 Work experiences
 -------------------------------------------*/
