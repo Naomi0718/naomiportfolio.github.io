@@ -21,18 +21,33 @@
     <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
+    <script>
+        // ページを離れるとき、スクロール位置を保存
+        window.addEventListener('beforeunload', function () {
+          sessionStorage.setItem('scrollY', window.scrollY);
+        });
+    
+        // ページ読み込み時、保存しておいた位置にスクロール
+        window.addEventListener('load', function () {
+          const scrollY = sessionStorage.getItem('scrollY');
+          if (scrollY !== null) {
+            window.scrollTo(0, parseInt(scrollY));
+          }
+        });
+      </script>
+
     <!-- ヘッダー -->
      <header>
         <!-- <a href="index.html">Naomi's portfolio</a> -->
-        <a href="" onclick="event.preventDefault(); location.reload();" style="cursor: pointer;">
-            Naomi's portfolio</a>
+        <a href="" onclick="event.preventDefault(); location.reload();" style="cursor: pointer;">Naomi's portfolio</a>
         <nav>
             <ul>
                 <li><a href="#about">About me</a></li>
+                <li><a href="#Uni-experiences">Univercity experiences</a></li>
                 <li><a href="#work-experience">Work experience</a></li>
                 <li><a href="#skills">Skill</a></li>
                 <li><a href="#my-research">My research</a></li>
-                <li><a href="#other-work">Overseas Experience</a></li>
+                <li><a href="#overseas-experience">Overseas Experience</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
@@ -51,21 +66,49 @@
             <section id="about">
                 <h2>-About me-</h2>
                 <div id="img-detail">
-                    <img src="/Users/sasakinaomi/Desktop/business%20portfolio/img/S__4857865.jpg?version%3D1745334205010">
-                    
+                    <!-- <img src="/Users/sasakinaomi/Desktop/business%20portfolio/img/S__4857865.jpg?version%3D1745334205010"> -->
+                    <img src="img/IMG_6961.JPG">
                     <div id="about-detail">
                         <div id="about-name">
                                 <h3>佐々木 直美</h3>
                                 <h3>Sasaki Naomi</h3>
                         </div>
                         <p>
-                            Soka Uni/Economics/ Theory and Statistics 2022/04 ~ 2027/03<br>
+                            Soka Uni/Economics/Theory and Statistics 2022/04 ~ 2027/03 (Scheduled to graduate)<br>
                             International People's College 2025/01 ~ 2025/07 <br>
-                            所属: 浅井学ゼミ/HOPE5期生/経済学理論同好会/国際連合研究会/経済学部企画 <br>
-                            I'm into Coffee, Baking, and Cooking<br>
-                            
+                            I'm into Coffee, Baking, and Cooking <br>and I often hold coffee hours with professors and friends!<br>
+                            My strength is the ability to get people involved! <br>
                         </p>
                     </div>
+                </div>
+            </section>
+        <!-- Univercity experiences -->
+            <section id="Uni-experiences">
+                <h2>-Univercity experiences-</h2>
+                <div class="Univercity-experiences">
+                    <p>
+                        ● Asai Manabu Seminar 17th batch<br>
+                        - I learn international finance theory <br>
+                        - In-university paper presentation competition 2nd place <br>
+                        <br>
+                        ● HOPE (Honors Program in Economics) 5th batch<br>
+                        - We Started to learn Economics from intermediate level<br>
+                        - I organized a research camp<br>
+                        <br>
+                        ● Soka Economics Theory Club<br>
+                        - I worked as a Deputy manager, External relations, Accounting position<br>
+                        <br>
+                        ● United Nations Study Club<br>
+                        - I worked as a Accounting position<br>
+                        - We visited to The United Nation in New York<br>
+                        <br>
+                        ● Faculty of Economics Planning <br>
+                        - Open campus staff for Faculty booth<br>
+                        - We receive consultations from students and I made a short presentation several times as a representative of the Faculty of Economics<br>
+                        <br>
+                        ● Advanced subjects<br>
+                        - Advanced Micro/Macro Economics, Advanced Econometrics<br>
+                    </p>
                 </div>
             </section>
 
@@ -75,15 +118,16 @@
             <div class="work-experiences">
                 <p>
                     ● Barista since 2022/10 ~ 2024/12<br>
-                        Starbucks Barista Tall <br>
+                        Starbucks Barista Tall / Partner of month twice / Partner of quater once<br>
                         <br>
-                    ● Undergraduate Teaching Assistant<br>
+                    ● Undergraduate Teaching Assistant at Soka Univercuty<br>
                         - Intermediate Microeconomics (2023 spring semester) <br>
                         - Intermediate Microeconomics (2024 spring semester)<br>
                         - Data Science (2024 fall semester)<br>
                         - Capital markets and securities investiment (2024 fall semester)<br>
                         <br>
-                    ● FEEL(Faculty of Economics Education Lounge) Staff (2024 fall semester)<br>
+                    ● FEEL(Faculty of Economics Education Lounge) Staff at Soka Univercuty (2024 fall semester)<br>
+                        - Students can ask any questions to me For example, Economics, Studying abroad and so on
                 </p>
                 </div>
             </section>
@@ -94,13 +138,13 @@
                 <div class="skill-list">
 
                     <div class="skill-item">
-                        <h3>R言語・Python</h3>
+                        <h3>R・Python</h3>
                         <p>I analized the data （Regression analysis and machine learning）and made a graph on my reseaches by R and Python</p>
                     </div>
 
                     <div class="skill-item">
                         <h3>HTML・CSS</h3>
-                        <p>I made two website of my portfolio by HTML and CSS</p>
+                        <p>I made two websites for my portfolio by HTML and CSS</p>
                     </div>
 
                     <div class="skill-item">
@@ -119,7 +163,8 @@
                         ⚫︎ Poverty in Africa<br>
                         ⚫︎ Encouraging students at my univercity to bring their own water bottle<br>
                         ⚫︎ How to make exchange student at my univercity want to work in Japan<br>
-                        ⚫︎ How to make young people interested in politics especially voting<br>
+                        ⚫︎ How to make young people interested in politics especially voting <br>
+                        (Submited to an external contest by EY Japan)<br>
                         ⚫︎ Does eating quickly lead to early death?<br>
                         ⚫︎ About marrage rate<br>
                         ⚫︎ The effects of Covid-19 to the industries<br>
@@ -132,9 +177,16 @@
             <h2>-Overseas Experience-</h2>
             <p>
                 ● Language training 2023/02~ (1 month)<br>
-                    - South Illinois Univercity in United states of America<br>
+                    - South Illinois Univercity in United states of America for learning English<br>
+                <br>
                 ● Study abroad 2025/01~ (6 months)<br>
-                    - International People's college in Denmark<br>
+                    - International People's college in Denmark for learning how to face and communicate with people all over the world<br>
+                    - I organized three events<br>
+                     Japanese dinner for 130 people, Japanese language exchange cafe for 60 students, Open mic for over 60 students<br>
+                    - I was a member of the student council as a party called Game changers<br>
+                    Student council is for making our college better and had a meeting once per a week<br>
+                    We ran the Fellowship (morning meeting) every Thrsday<br>
+                    Game changers supported students to organize Language exchange cafes and game tournaments<br>
             </p>
             </section>
 
